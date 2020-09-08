@@ -1,0 +1,30 @@
+.ourCustomers
+    padding-top: 0
+    &-slide 
+        display: block
+        overflow: hidden
+        height: 250px
+        background: $primary
+        &:hover 
+            img 
+                opacity: 0.6
+        img 
+            object-fit: cover 
+            object-position: center
+            height: 100%
+            width: 100%
+            transition: $default-transition
+
+@media #{ $sm-and-down }
+    .ourCustomers 
+        margin-left: -15px
+        margin-right: -15px
+        .swiper-slide
+            transition: .3s cubic-bezier(.3,.76,.3,.91)
+        .swiper-slide-active
+            transform: scale(.9)
+            z-index: 2
+        .swiper-slide-prev
+            transform: scale(.8) translateX(25%)
+        .swiper-slide-next
+            transform: scale(.8) translateX(-25%)

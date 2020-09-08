@@ -1,0 +1,21 @@
+#instaWrap 
+    margin-bottom: -30px
+.instagram
+    padding-top: 0
+    .mainButton_large
+        margin-top: 28px
+        &:hover 
+            color: $white
+    &-link
+        display: block
+        background: $primary
+        margin-bottom: 30px
+        img
+            transition: $default-transition
+        &:hover
+            img
+                opacity: .6 
+@media #{ $sm-and-down }
+    .instagram 
+        .mainButton_large
+            max-width: 100%

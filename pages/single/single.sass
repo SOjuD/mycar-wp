@@ -1,0 +1,107 @@
+.single 
+    .phone 
+        display: block
+        margin-bottom: 4px
+    .adress 
+        color: $gray-light
+        margin-bottom: 16px
+    &-title 
+        margin-right: 18px
+    &-price 
+        margin-right: 10px
+        color: $primary
+    &-slider 
+        margin-bottom: 40px
+        a 
+            display: block
+            background: $primary
+            &:hover 
+                img 
+                    opacity: 0.6
+    &-slide 
+        width: 100%
+        height: 320px
+        overflow: hidden
+        img 
+            object-fit: cover 
+            object-position: center center
+    &-thumbs 
+        margin-left: -4px
+        margin-right: -4px
+    &-thumbnail
+        margin: 4px
+        width: calc((100% - 40px) / 5)
+        height: 50px
+        overflow: hidden
+        cursor: pointer
+        border: 2px solid $white
+        transition: $default-transition
+        background: $primary
+        &.active 
+            border: 2px solid $primary
+        &:hover 
+            img
+                opacity: 0.6
+        img 
+            width: 100%
+            object-fit: cover
+            object-position: center center
+    &-param 
+        margin-right: 34px
+        &:last-child 
+            margin-right: 0
+        svg 
+            display: block
+            margin: 0 auto 4px
+        &-list 
+            margin-top: 20px
+            margin-bottom: 30px
+        &-item 
+            margin-bottom: 12px
+            &:last-child
+                margin-bottom: 0
+    &-kit
+        ul 
+            column-count: 2
+            column-gap: 30px
+        li 
+            @extend .p1 
+            margin-bottom: 16px
+    &-space 
+        margin-top: 60px
+    &-map 
+        padding-top: 0
+    &-offer 
+        padding-top: 0
+    &-offer 
+        margin-top: 0
+        .mainButton 
+            margin: 36px auto 0
+    .mainButton 
+        margin-bottom: 8px
+    img 
+        transition: $default-transition
+
+
+@media #{ $lg-and-down }
+    .single 
+        .mainButton
+            max-width: 100%
+            &_invert
+                max-width: 100%
+        &-kit
+            margin-bottom: 60px
+@media #{ $md-and-down }
+    .single
+        &-params
+            margin-top: 30px
+            svg 
+                width: 40px 
+                height: 40px 
+            .col-12:nth-child(1)
+                order: 0
+            .col-12:nth-child(2)
+                order: 2
+            .col-12:nth-child(3)
+                order: 1
+

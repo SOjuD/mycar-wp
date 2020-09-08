@@ -1,0 +1,106 @@
+const baseURL = document.querySelector('[property="og:url"]').content;
+
+function objFromSearch(str) {
+    try{
+        if( !str ) return {};
+        let newStr = str.replace(/\?/ , '"');
+        newStr = newStr.replace(/=/gm, '":"');
+        newStr = newStr.replace(/&/gm, '","');
+        return JSON.parse(`{${newStr}"}`)
+    }catch(err){
+        return new Error(`Неправильные параметры запроса: ${err}`);
+    }
+}
+
+function searchFromObj (obj){
+    let str = '';
+    if( !obj ) return '';
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            const q = str.length ? '&' : '?';
+            str += q + key +"="+ obj[key];
+        }
+    }
+    return str;
+}
+
+async function getData (url) {
+    const response = await fetch(url);
+    if(response.ok) return await response.json();
+    return new Error(`Ошибка получения данных, ошибка: ${response.status}`);
+}
+
+function changeCatalog( args = '' ){
+
+    const catalogEl = document.querySelector('#catalog');
+    if( !catalogEl ) return;
+    
+    catalogEl.innerHTML = '';
+    catalogEl.classList.add('loading');
+    
+    document.querySelector('#catalogAnchor').scrollIntoView({behavior: 'smooth'});
+    getData(`${baseURL}/wp-json/mycar/v1/posts/${args}`)
+    .then( data => {
+        catalogEl.innerHTML = data.cards;
+        buildPagination(data.params);
+    })
+    .catch( err => {
+        catalogEl.innerHTML = `<h2>Ошибка ответа сервера: ${err}</h2>`;
+    })
+    .finally(() => {
+        catalogEl.classList.remove('loading');
+    })
+}
+
+function buildPagination({ pages, page }){
+
+    const paginationEl = document.querySelector('#pagination');
+    if( !paginationEl ) return;
+
+    if(pages <= 1){
+        paginationEl.classList.add('d-none');
+        return;
+    }
+
+    paginationEl.classList.remove('d-none');
+    let template = '';
+    for(let i = 1; i <= pages; i++){
+        template += `
+            <label>
+                <input type="radio" name="list" value="${i}" ${ i == page ? 'checked' : '' }>
+                <span class="c1">${i}</span>
+            </label>
+        `;
+    }
+    paginationEl.querySelector('.pagination-container').innerHTML = template;
+
+}
+
+
+async function addModels (mark, form) {    
+    form.classList.add('wait');    
+    try{
+        const models = await getData(`${baseURL}/wp-json/wp/v2/categories/?parent=${mark}`)
+        
+        const modelEl = form.querySelector('[name="model"]');
+        let content = '<option selected disabled>Модели</option>';
+        models.forEach( el => {
+            content += `<option value="${el.id}">${el.name}</option>`;
+        });
+        modelEl.innerHTML = content;
+    }catch (err){
+        alert(err);
+    }
+    form.classList.remove('wait');
+}
+
+
+
+export {
+    baseURL,
+    objFromSearch,
+    searchFromObj,
+    getData,
+    changeCatalog,
+    addModels,
+}

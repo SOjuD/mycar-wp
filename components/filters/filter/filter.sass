@@ -1,0 +1,45 @@
+.filter
+    background: $white
+    >* 
+        display: block
+        width: 100%
+        margin-bottom: 15px
+        &:last-child 
+            margin-bottom: 0
+    &-subtitle 
+        width: 100%
+        margin-bottom: 6px
+    &-subwrap
+        input, select 
+            width: 45%
+    input, select 
+        padding: 8px 12px
+        border: 1px solid #bfbfbf
+    [type="reset"]
+        background: none
+        border: none
+        border-bottom: 1px dashed $gray
+    .mainButton 
+        max-width: 100%
+
+[data-target="slide-out-filter"]
+    max-width: 100% !important
+    margin-bottom: 50px
+    svg 
+        margin-right: 10px
+
+
+@media #{$xl-and-down}
+    .filter
+        background: #F1F1F1
+        transform: translateX(-105%)
+        padding: 30px
+        position: fixed
+        top: 0 
+        left: 0
+        width: 90%
+        max-width: 390px
+        height: 100vh
+        align-content: flex-start
+        z-index: 99999
+        overflow-y: auto

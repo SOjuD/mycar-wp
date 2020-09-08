@@ -1,0 +1,42 @@
+.header-slider
+    width: 100%
+    max-width: 100%
+    overflow: hidden
+    .slide 
+        min-height: 670px
+    h1, h2
+        @extend .h1
+        margin-bottom: 20px
+        color: $white
+    h4 
+        @extend .h2
+        color: $primary
+        margin-bottom: 10px
+    h3 
+        @extend .h2
+        margin-bottom: 10px
+        color: $white
+    .mainButton 
+        margin-top: 54px
+.swiper-pagination
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 2
+.swiper-pagination-bullet
+    width: 8px
+    height: 8px
+    border-radius: 100%
+    background: $white
+    margin: 12px 9px
+    &-active 
+        transform: scale(1.5)
+        background: $primary
+        transition: $default-transition
+
+@media #{ $md-and-down }
+    .header-slider
+        .container
+            h1, h2
+                font-size: 50px
+                line-height: 60px

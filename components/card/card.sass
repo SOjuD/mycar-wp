@@ -1,0 +1,39 @@
+.card
+    height: 100%
+    img 
+        transition: .3s cubic-bezier(0.3, 0.76, 0.3, 0.91)
+    &:hover 
+        color: $gray
+        .card-description 
+            border-color: $primary
+    &-description
+        background: #F8FAFF
+        border: 1px solid #E5E5E5
+        border-top: none
+        padding: 16px
+        transition: $default-transition
+        margin-bottom: 30px
+    &-title 
+        margin-bottom: 12px
+    &-params 
+        margin-bottom: 10px
+    &-param
+        text-align: center
+        color: $gray-light
+        svg 
+            display: block
+            margin: 0 auto 4px
+    &-price 
+        padding-top: 11px
+        border-top: 1px solid #C6C6C6
+        &-item 
+            margin-bottom: 6px
+            color: $gray
+            &:last-child
+                margin-bottom: 0
+        &-value 
+            text-align: right
+            &:first-child
+                padding-right: 12px
+                margin-right: 12px
+                border-right: 1px solid $gray

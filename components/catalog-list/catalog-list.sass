@@ -1,0 +1,86 @@
+.simple 
+    .col-12 
+        width: 100% !important
+        max-width: 100% !important
+        flex-basis: 100% !important
+    .card 
+        flex-direction: row !important
+        align-items: center !important
+        margin-bottom: 30px !important
+        img 
+            width: 160px
+            height: 125px
+            margin-right: 25px
+        svg 
+            display: none
+        &-description 
+            background: none 
+            border: none !important
+            display: flex
+            padding: 0 !important
+            margin-bottom: 0
+            justify-content: flex-end !important
+            *
+                text-align: center !important
+                font-size: 16px !important
+                line-height: 24px !important
+                font-weight: 400
+            >*
+                margin-right: 25px !important
+                flex-grow: 1
+        &-title 
+            margin-bottom: 0
+            max-width: 100px !important
+            font-size: 18px
+            line-height: 24px
+            text-align: left !important
+            display: flex
+            align-items: center
+        &-params
+            margin-bottom: 0
+            display: flex
+            align-items: center !important
+        &-param
+            margin-right: 25px
+            &:last-child
+                margin-right: 0
+    ul.card-params
+        width: 60px !important
+        max-width: 60px !important
+        text-align: center
+        .card-param      
+            margin: 0 auto !important  
+            &:last-child
+                display: none !important
+            &-name
+                display: none !important
+            &-value
+
+    .card-price
+        border: none
+        padding: 0 !important
+        margin: 0 !important
+        width: 90px !important
+        &-item
+            display: block !important
+            margin: 0 !important
+            &:nth-child(2), &:nth-child(3)
+                display: none !important
+            .d-flex 
+                display: block !important
+        &-name 
+            display: none
+        &-value
+            display: block
+            text-align: right !important
+            font-weight: 400
+            width: 100px !important
+            max-width: 100px !important
+            &:first-child
+                margin: 0 !important
+                padding: 0 !important
+                border: none !important
+                font-weight: 600 !important
+            
+
+

@@ -1,0 +1,31 @@
+.toFilter
+    select
+        margin-right: 16px 
+        flex: 1 0 120px
+        max-width: 160px
+        height: 50px
+        border: 1px solid #EBEBEB
+        margin-bottom: 0
+        padding: 0 10px
+        display: block
+        &:nth-child(2), &:nth-child(3)
+            flex: 1 0 160px
+    .mainButton 
+        width: auto
+        max-width: 100%
+        flex: 2 0 180px
+
+
+
+@media #{ $lg-and-down }
+    .toFilter
+        select
+            margin-bottom: 16px
+            margin-right: 0
+            flex: 1 0 160px
+        .mainButton 
+            margin-bottom: 16px
+@media #{ $sm-and-down }
+    .toFilter
+        select
+            max-width: 48%

@@ -1,0 +1,44 @@
+.top 
+    background: $gray
+    position: sticky
+    top: 0
+    z-index: 100
+    &-logo
+        margin-right: 10%
+    &-content 
+        position: relative
+        padding-bottom: 5px
+        &:before 
+            content: ''
+            position: absolute
+            left: 15px
+            right: 15px
+            height: 1px
+            bottom: -1px
+            background: $white
+    &-contactTrigger
+        padding: 0 15px
+        height: 100%
+        border-left: 1px solid $white
+        svg 
+            margin: 0 !important
+    * 
+        color: $white
+    svg 
+        margin-right: 14px
+    .mainButton 
+        margin-top: 12px
+    .phone 
+        margin-left: 10px
+.custom-logo
+    max-width: 116px
+    height: auto
+
+@media #{ $lg-and-down }
+    .top
+        &-content
+            padding: 4px 0
+            &:before
+                display: none 
+        &-logo 
+            margin: 0 auto
