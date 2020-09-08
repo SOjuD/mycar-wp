@@ -184,15 +184,31 @@ input::-webkit-inner-spin-button
     * 
         cursor: inherit
 
-
+.pageBanner
+    background: url(../img/banner.jpg) no-repeat center
+    background-size: cover
+    padding: 120px 0
+    color: $white
+    .h1 
+        color: $secondary
+        margin-bottom: 20px
+    .t1 
+        margin-bottom: 14px
+    .mainButton 
+        margin-top: 48px
+.arrowBlock
+    &-num 
+        font-size: 69px
+        font-weight: 700
+        color: $primary
+        margin-bottom: 6px
+    &-text 
+        max-width: 140px
+    
 
 
 @media #{ $sm-and-down }
     .swiper-button-next, .swiper-button-prev
         display: none
-    // .h1 
-    //     padding: 0
-    //     border: none
-    // .h2 
-    //     font-size: 24px
-    //     line-height: 32px
+    .pageBanner
+        padding: 60px 0
