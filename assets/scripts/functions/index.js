@@ -76,17 +76,22 @@ function buildPagination({ pages, page }){
 
 }
 
-
 async function addModels (mark, form) {    
     form.classList.add('wait');    
     try{
         const models = await getData(`${baseURL}/wp-json/wp/v2/categories/?parent=${mark}`)
         
         const modelEl = form.querySelector('[name="model"]');
-        let content = '<option selected disabled>Модели</option>';
-        models.forEach( el => {
-            content += `<option value="${el.id}">${el.name}</option>`;
-        });
+
+        let content = '<option selected disabled value="">Модели</option>';
+
+        if( models.length ){
+            models.forEach( el => {
+                content += `<option value="${el.id}">${el.name}</option>`;
+            });
+        }else{
+            content = '<option selected disabled value="">Ничего не найдено</option>';
+        }
         modelEl.innerHTML = content;
     }catch (err){
         alert(err);
@@ -94,7 +99,28 @@ async function addModels (mark, form) {
     form.classList.remove('wait');
 }
 
+async function addCars (label, form) {    
+    form.classList.add('wait');    
+    try{
+        const models = await getData(`${baseURL}/wp-json/wp/v2/posts/?categories=${label}`)
+        
+        const carEl = form.querySelector('[name="car"]');
 
+        let content = '<option selected disabled value="">Автомобиль</option>';
+
+        if( models.length ){
+            models.forEach( el => {
+                content += `<option value="${el.link}">${el.title.rendered}</option>`;
+            });
+        }else{
+            content = '<option selected disabled value="">Ничего не найдено</option>';
+        }
+        carEl.innerHTML = content;
+    }catch (err){
+        alert(err);
+    }
+    form.classList.remove('wait');
+}
 
 export {
     baseURL,
@@ -103,4 +129,5 @@ export {
     getData,
     changeCatalog,
     addModels,
+    addCars
 }

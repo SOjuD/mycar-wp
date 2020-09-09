@@ -25,6 +25,7 @@ import '../../components/our-instagram/our-instagram';
 import '../../components/our-customers/our-customers';
 import '../../components/catalog-list/catalog-list';
 import '../../components/catalog-pagination/catalog-pagination';
+import '../../components/change-form/change-form';
 
 
 

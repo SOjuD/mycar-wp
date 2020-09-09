@@ -197,16 +197,26 @@ input::-webkit-inner-spin-button
     .mainButton 
         margin-top: 48px
 .arrowBlock
-    &-num 
+    &-num
         font-size: 69px
         font-weight: 700
         color: $primary
         margin-bottom: 6px
-    &-text 
+        margin-right: 20px
+    &-text
         max-width: 140px
-    
+
+.error 
+    border: 1px solid #F54545 !important
+    box-shadow: 0px 0px 9px rgba(211, 41, 41, 0.12) !important
 
 
+@media #{ $lg-and-down }
+    .arrowBlock
+        &-content
+            width: 100%
+
+            
 @media #{ $sm-and-down }
     .swiper-button-next, .swiper-button-prev
         display: none
