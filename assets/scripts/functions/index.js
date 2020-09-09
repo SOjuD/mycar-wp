@@ -85,7 +85,7 @@ async function addModels (mark, form) {
         
         const modelEl = form.querySelector('[name="model"]');
 
-        let content = '<option selected disabled value="">Модели</option>';
+        let content = '<option selected value="">Модели</option>';
 
         if( models.length ){
             models.forEach( el => {
@@ -108,7 +108,7 @@ async function addCars (label, form) {
         
         const carEl = form.querySelector('[name="car"]');
 
-        let content = '<option selected disabled value="">Автомобиль</option>';
+        let content = '<option selected value="">Автомобиль</option>';
 
         if( models.length ){
             models.forEach( el => {
@@ -134,7 +134,6 @@ async function sendFeedback (evt) {
         body: formData
       });
    if(response.status == 200){
-        evt.reset();
         showSuccess();
     }else{
         showError(response.status);

@@ -17,10 +17,13 @@ const instances = M.Modal.init(elems, {
         const modal = this.el;
 
         const infoEl = modal.querySelector('[name="info"]');
+        const titleEl = modal.querySelector('.modal-title');
         const title = button.textContent;
         const description = button.dataset.description || title;
+        
 
         infoEl.value = description;
+        titleEl.textContent = title;
 
         if( button.textContent.indexOf('выкуп')+1 ) modal.querySelector('.modal-auto').classList.remove('d-none');
 
