@@ -180,9 +180,16 @@ input::-webkit-inner-spin-button
 
 
 .wait 
-    cursor: wait
-    * 
-        cursor: inherit
+    position: relative
+    &:before 
+        content: ''
+        position: absolute
+        z-index: 2
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background: rgba($white, .7) url(../img/loading.svg) no-repeat center
 
 .pageBanner
     background: url(../img/banner.jpg) no-repeat center
