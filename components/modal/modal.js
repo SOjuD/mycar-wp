@@ -11,18 +11,16 @@ const instances = M.Modal.init(elems, {
 
         const button =  this._openingTrigger;
         const modal = this.el;
-        // const titleEl = modal.querySelector('.modal-title');
-        // const descriptionEl = modal.querySelector('.modal-description');
+
         const infoEl = modal.querySelector('[name="info"]');
         const title = button.textContent;
-        const description = button.dataset.description;
-        const info = button.dataset.info;
-        // titleEl.textContent = title;
-        // descriptionEl.textContent = description;
-        if(title) infoEl.value = title;
-        if(button.textContent == 'Оставить отзыв'){
-            const textarea = modal.querySelector('textarea');
-            textarea.classList.remove('d-none');
+        const description = button.dataset.description || title;
+
+        infoEl.value = description;
+        if( button.textContent.indexOf('выкуп')+1 ){
+            modal.querySelector('.modal-auto').classList.remove('d-none');
+        }else {
+            modal.querySelector('.modal-auto').classList.add('d-none');
         }
 
     },
@@ -37,26 +35,3 @@ const instances = M.Modal.init(elems, {
     }
 });
 
-
-const forms = document.querySelectorAll('.feedback');
-
-forms.forEach(form => {
-    form.addEventListener('submit', async evt => {
-        evt.preventDefault();
-        const formData = new FormData(evt.target);
-        let response = await fetch('/mail.php', {
-            method: 'POST',
-            body: formData
-          });
-       if(response.status == 200){
-            jQuery(function($){
-                $('.modal-message_success').fadeIn();
-            });
-        }else{
-            console.error(`error: ${response.status}`);
-            jQuery(function($){
-                $('.modal-message_error').fadeIn();
-            });
-       }
-    })
-});

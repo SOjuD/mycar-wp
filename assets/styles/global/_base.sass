@@ -41,7 +41,7 @@ p
 
 .t1
     font-size: 24px
-    line-height: 36px
+    line-height: 32px
     font-weight: 700
     font-family: $title-font
 
@@ -196,7 +196,12 @@ input::-webkit-inner-spin-button
         margin-bottom: 14px
     .mainButton 
         margin-top: 48px
+
+.simpleStep 
+    margin-bottom: -50px
+
 .arrowBlock
+    margin-bottom: 50px
     &-num
         font-size: 69px
         font-weight: 700
@@ -216,9 +221,17 @@ input::-webkit-inner-spin-button
         &-content
             width: 100%
 
-            
+
 @media #{ $sm-and-down }
     .swiper-button-next, .swiper-button-prev
         display: none
     .pageBanner
         padding: 60px 0
+    .pageBanner 
+        .h1
+            font-size: 48px
+            line-height: 56px
+            margin-bottom: 40px
+        .t1 
+            font-weight: 400
+            margin-bottom: 20px

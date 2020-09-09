@@ -122,6 +122,24 @@ async function addCars (label, form) {
     form.classList.remove('wait');
 }
 
+async function sendFeedback (evt) {
+    const formData = new FormData(evt.target);
+    let response = await fetch('/mail.php', {
+        method: 'POST',
+        body: formData
+      });
+   if(response.status == 200){
+        jQuery(function($){
+            $('.modal-message_success').fadeIn();
+        });
+    }else{
+        console.error(`error: ${response.status}`);
+        jQuery(function($){
+            $('.modal-message_error').fadeIn();
+        });
+   }
+}
+
 export {
     baseURL,
     objFromSearch,
@@ -129,5 +147,6 @@ export {
     getData,
     changeCatalog,
     addModels,
-    addCars
+    addCars,
+    sendFeedback
 }
