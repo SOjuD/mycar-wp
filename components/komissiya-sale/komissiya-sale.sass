@@ -1,0 +1,29 @@
+.komissiyaSale
+    .secTitle
+        color: rgba($black, .65) 
+    ul
+        // column-count: 2
+        // column-gap: 30px
+        
+        li
+            margin-bottom: 28px
+            
+            position: relative
+            padding-left: 30px
+            &:before
+                content: "" 
+                height: 7px
+                width: 13px 
+                border-bottom: 2px solid $primary
+                border-left: 2px solid $primary
+                position: absolute
+                top: 10%
+                left: 0
+                transform: rotate(-45deg)
+@media #{ $sm-and-down }
+    .komissiyaSale
+        
+        ul
+            column-count: 1
+            column-gap: 30px
+        

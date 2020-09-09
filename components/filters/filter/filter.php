@@ -36,7 +36,7 @@ $categories = get_categories([
 <div class="filter" id="slide-out-filter">
     <div class="t2 filter-title">Параметры автомобиля</div>
     <select name="mark">
-        <option selected disabled>Марки</option>
+        <option selected>Марки</option>
         <?php
         if ($categories) {
             foreach ($categories as $cat) echo "<option value='$cat->cat_ID'>$cat->name</option>";
