@@ -1,4 +1,4 @@
-import { addModels, addCars } from '../../assets/scripts/functions';
+import { addModels, addCars, sendFeedback } from '../../assets/scripts/functions';
 
 (()=>{
     const formCar = document.querySelector('#leasingCars');
@@ -17,7 +17,6 @@ import { addModels, addCars } from '../../assets/scripts/functions';
     
 
     form.addEventListener('submit', async (evt)=>{
-        evt.preventDefault();
 
         formCar.querySelectorAll('select').forEach( el => {
 
@@ -44,7 +43,7 @@ import { addModels, addCars } from '../../assets/scripts/functions';
 
         if(formCar.querySelectorAll('.error').length > 0) return;
 
-        console.log('отправлено');
+        sendFeedback(evt);
 
     });
 

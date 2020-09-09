@@ -11,7 +11,10 @@ import { changeCatalog, objFromSearch } from '../../assets/scripts/functions';
     if( !args ) return;
     
     const { sort } = objFromSearch(args);
-    document.querySelector(`[value="${ sort }"]`).selected = true
+    const activeSortEl = document.querySelector(`[value="${ sort }"]`);
+    
+    if( activeSortEl ) activeSortEl.selected = true;
+
     }catch( error ) {
         alert(error);
     }

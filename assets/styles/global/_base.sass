@@ -101,6 +101,7 @@ section
     padding: 70px 0
 .secTitle 
     @extend .h2 
+    width: 100%
     margin-bottom: 40px
 
 img 
@@ -132,7 +133,6 @@ button
 
 // убираем стрелки с input type="number"
 input::-webkit-inner-spin-button
-    /* display: none <- Crashes Chrome on hover */
     -webkit-appearance: none
     -moz-appearance: none
     margin: 0
@@ -173,16 +173,20 @@ input::-webkit-inner-spin-button
     &:hover 
         background: #FF5C00
         color: $white
-.secTitle
-    width: 100%
-    margin-bottom: 40px
-    @extend .h2
+
 
 
 .wait 
-    cursor: wait
-    * 
-        cursor: inherit
+    position: relative
+    &:before 
+        content: ''
+        position: absolute
+        z-index: 2
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background: rgba($white, .7) url(../img/loading.svg) no-repeat center
 
 .pageBanner
     background: url(../img/banner.jpg) no-repeat center

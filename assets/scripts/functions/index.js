@@ -1,3 +1,5 @@
+import M from "materialize-css";
+
 const baseURL = document.querySelector('[property="og:url"]').content;
 
 function objFromSearch(str) {
@@ -36,7 +38,7 @@ function changeCatalog( args = '' ){
     if( !catalogEl ) return;
     
     catalogEl.innerHTML = '';
-    catalogEl.classList.add('loading');
+    catalogEl.classList.add('wait');
     
     document.querySelector('#catalogAnchor').scrollIntoView({behavior: 'smooth'});
     getData(`${baseURL}/wp-json/mycar/v1/posts/${args}`)
@@ -48,7 +50,7 @@ function changeCatalog( args = '' ){
         catalogEl.innerHTML = `<h2>Ошибка ответа сервера: ${err}</h2>`;
     })
     .finally(() => {
-        catalogEl.classList.remove('loading');
+        catalogEl.classList.remove('wait');
     })
 }
 
@@ -123,21 +125,39 @@ async function addCars (label, form) {
 }
 
 async function sendFeedback (evt) {
+
+    evt.preventDefault();
+
     const formData = new FormData(evt.target);
     let response = await fetch('/mail.php', {
         method: 'POST',
         body: formData
       });
    if(response.status == 200){
-        jQuery(function($){
-            $('.modal-message_success').fadeIn();
-        });
+        evt.reset();
+        showSuccess();
     }else{
-        console.error(`error: ${response.status}`);
+        showError(response.status);
+   }
+}
+
+function showSuccess (){
+    const elem = document.querySelector('#modalForm');
+    const instance = M.Modal.getInstance(elem);
+    jQuery(function($){
+        $('.modal-message_success').fadeIn();
+    });
+    instance.open();
+}
+
+function showError (err){
+    const elem = document.querySelector('#modalForm');
+    const instance = M.Modal.getInstance(elem);
+    console.error(`error: ${err}`);
         jQuery(function($){
             $('.modal-message_error').fadeIn();
         });
-   }
+    instance.open();
 }
 
 export {

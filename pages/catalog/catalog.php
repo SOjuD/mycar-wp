@@ -15,7 +15,6 @@
                     <div id="catalog" class="row">
                         <div class="t1">Loading...</div>
                     </div>
-                    <?php get_template_part( './components/preloader/preloader' ); ?>
                     <?php get_template_part( './components/catalog-pagination/catalog-pagination' ) ?>
                 </div>
             </div>
