@@ -1,6 +1,5 @@
 import M from "materialize-css";
 
-
 const baseURL = document.querySelector('[property="og:url"]').content;
 
 function objFromSearch(str) {
@@ -150,6 +149,7 @@ function showSuccess (){
     });
     instance.open();
 }
+
 function showError (err){
     const elem = document.querySelector('#modalForm');
     const instance = M.Modal.getInstance(elem);
