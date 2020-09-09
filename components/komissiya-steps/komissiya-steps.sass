@@ -1,0 +1,39 @@
+.komissiya-steps
+    .secTitle
+        color: rgba($black, .65) 
+    h3
+        color: #ED7702
+    span
+        color: rgba($black, .65)
+        display: block
+        margin-bottom: 34px
+    ul
+        column-count: 2
+        column-gap: 30px
+        li
+            color: rgba($black, .65 )
+            margin-bottom: 13px
+            position: relative
+            padding-left: 30px
+            &:before
+                content: "" 
+                height: 7px
+                width: 13px 
+                border-bottom: 2px solid $primary
+                border-left: 2px solid $primary
+                position: absolute
+                top: 10%
+                left: 0
+                transform: rotate(-45deg)
+
+    p
+        font-size: 12px
+        margin-top: 25px
+        color: rgba($black, .65)
+
+@media #{ $sm-and-down }
+    .komissiya-steps
+   
+        ul
+            column-count: 1
+            column-gap: 30px

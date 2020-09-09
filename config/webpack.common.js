@@ -1,13 +1,13 @@
-const path = require( 'path' );
+const path = require('path');
 const webpack = require('webpack');
-           
+
 module.exports = {
-    entry: path.resolve( __dirname, '../assets/scripts/bundle.js' ),
+    entry: path.resolve(__dirname, '../assets/scripts/bundle.js'),
     output: {
         filename: "[name].js",
-        path: path.resolve( __dirname, '../dist' ),
+        path: path.resolve(__dirname, '../dist'),
         publicPath: 'http://localhost:8080/dist/'
-        // publicPath: './' 
+            // publicPath: './' 
     },
     module: {
         rules: [
@@ -20,13 +20,13 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-				query: {
-                    presets: [ 'es2015', 'react' ]
-				}
+                query: {
+                    presets: ['es2015', 'react']
+                }
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(jpg|png|svg)$/,
@@ -48,6 +48,6 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
-          }),
+        }),
     ]
 };

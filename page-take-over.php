@@ -1,0 +1,1 @@
+<?php get_template_part( './pages/take-over/take-over' ) ?>
