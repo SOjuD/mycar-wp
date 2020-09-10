@@ -1,0 +1,38 @@
+.detailingSteps
+    .mainButton 
+        margin-top: 50px
+    .arrowBlock 
+        height: 100%
+        &-text 
+            margin-bottom: 30px
+            max-width: 200px
+        &-content 
+            z-index: 2
+            height: 100%
+        &-img 
+            z-index: 0
+            transform-origin: center bottom
+            transform: scale(1.2)
+        &-list 
+            max-width: 200px
+            &-item
+                position: relative
+                padding-left: 24px
+                margin-bottom: 4px
+                &:last-child 
+                    margin-bottom: 0
+                &:before
+                    content: "" 
+                    height: 7px
+                    width: 13px 
+                    border-bottom: 2px solid $primary
+                    border-left: 2px solid $primary
+                    position: absolute
+                    top: 5px
+                    left: 0
+                    transform: rotate(-45deg)
+@media #{ $lg-and-down }
+    .detailingSteps
+        .arrowBlock 
+            &-list 
+                max-width: 100%
