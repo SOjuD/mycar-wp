@@ -1,1 +1,1 @@
-<?php get_template_part( './pages/revies/revies' ) ?>
+<?php get_template_part( './pages/reviews/reviews' ) ?>

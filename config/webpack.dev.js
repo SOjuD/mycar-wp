@@ -12,7 +12,7 @@ module.exports = merge(commonConfig, {
         hot: true,
         proxy: {
             '**': {
-                target: 'http://mycar.loc/komissiya/',
+                target: 'http://mycar.loc/reviews/',
                 secure: true,
                 changeOrigin: true,
                 path: /./

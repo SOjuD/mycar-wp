@@ -134,6 +134,7 @@ async function sendFeedback (evt) {
         body: formData
       });
    if(response.status == 200){
+        evt.target.reset();
         showSuccess();
     }else{
         showError(response.status);
