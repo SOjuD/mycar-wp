@@ -85,7 +85,7 @@ async function addModels (mark, form) {
         
         const modelEl = form.querySelector('[name="model"]');
 
-        let content = '<option selected value="">Модели</option>';
+        let content = '<option selected disabled value="">Модели</option>';
 
         if( models.length ){
             models.forEach( el => {
@@ -96,7 +96,8 @@ async function addModels (mark, form) {
         }
         modelEl.innerHTML = content;
     }catch (err){
-        alert(err);
+        console.log(err);
+        showError()
     }
     form.classList.remove('wait');
 }
@@ -108,20 +109,63 @@ async function addCars (label, form) {
         
         const carEl = form.querySelector('[name="car"]');
 
-        let content = '<option selected value="">Автомобиль</option>';
+        let content = '<option selected disabled value="">Автомобиль</option>';
 
         if( models.length ){
             models.forEach( el => {
-                content += `<option value="${el.link}">${el.title.rendered}</option>`;
+                content += `<option value="${el.link}" data-id=${el.id}>${el.title.rendered}</option>`;
             });
         }else{
             content = '<option selected disabled value="">Ничего не найдено</option>';
         }
         carEl.innerHTML = content;
     }catch (err){
-        alert(err);
+        console.log(err);
+        showError()
     }
+
     form.classList.remove('wait');
+}
+
+async function setCarToCredit (id, form) {    
+    form.classList.add('wait');    
+    try{
+        const car = await getData(`${baseURL}/wp-json/mycar/v1/car-to-credit/${id}`)
+        
+        const rate = form.dataset.rate;
+        const percent = form.dataset.percent;
+        const price = car.price;
+        const priceByn = Math.round( price * rate );
+        const prePay = 0;
+        const months = form.querySelector('#creditTime-range').value;
+
+        form.querySelector('.priceUsd').textContent = `${price} $`;
+        form.querySelector('.priceByn').textContent = `${priceByn} р.`;
+        form.querySelector('#aanbetaling-range').max = priceByn / 2;
+        form.querySelector('#aanbetaling-range').value = prePay;
+        form.querySelector('.aanbetaling-val').textContent = prePay;
+        form.querySelector('#kreditCalc-img').src = car.thumbnailUrl;
+        
+        const minPay = calcMinCreditPay (percent, months, price, prePay);
+        
+        form.querySelector('#creditCalc-price').textContent = `${minPay} р.`;
+
+
+        
+    }catch (err){
+        console.log(err);
+        showError()
+    }
+    
+
+    form.classList.remove('wait');
+}
+
+function calcMinCreditPay (percent, months, price, prePay = 0){
+    const startPrice = price - prePay;
+
+    if(price == 0) return 0;
+    return Math.round((startPrice * 0.6) * ((percent * Math.pow((1 + percent), months)) / (Math.pow((1 + percent), months) - 1)));
 }
 
 async function sendFeedback (evt) {
@@ -168,5 +212,7 @@ export {
     changeCatalog,
     addModels,
     addCars,
-    sendFeedback
+    sendFeedback,
+    setCarToCredit,
+    calcMinCreditPay
 }

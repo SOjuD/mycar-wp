@@ -19,6 +19,6 @@ $bank_res = json_decode(file_get_contents("https://www.bsb.by/ajax.php?request=c
 $rate = $bank_res->data->USD->BUY->BYN;
 
 
-$credit_percent = $customizer_params['percent'] / 12 / 100;
+$leasing_percent = ($customizer_params['percent'] / 12 ) / 100;
 
-$leasing_percent = ($customizer_params['percent_credit'] / 100 ) / 12 ;
+$credit_percent = ($customizer_params['percent_credit'] / 100 ) / 12 ;

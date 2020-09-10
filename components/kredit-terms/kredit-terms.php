@@ -1,6 +1,6 @@
 <?php global $customizer_params; ?>
-<section class="leasing">
-    <div class="container leasing-container">
+<section class="kreditTerms">
+    <div class="container kreditTerms-container">
         <div class="secTitle">Условия покупки автомобиля в лизинг:</div>
         <div class="row">
             <div class="col-12 col-md-6 terms-wrap">    

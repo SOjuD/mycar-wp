@@ -1,5 +1,5 @@
 <?php global $customizer_params; ?>
-<section class="leasingRequired">
+<section class="kreditRequired">
     <div class="container">
         <div class="secTitle">Для покупки автомобиля в кредит вам понадобится:</div>
  

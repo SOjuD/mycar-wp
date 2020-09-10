@@ -7,9 +7,9 @@
 
     $priceBYN = round( get_field('price', $card->ID) * $rate );
 
-    $min_pay_leasing = round( ($priceBYN * 0.6) * (($credit_percent * pow(( 1 + $credit_percent ), 36)) / (pow(( 1 + $credit_percent ), 36) - 1) ) );
+    $min_pay_credit = round( ($priceBYN * 0.6) * (($credit_percent * pow(( 1 + $credit_percent ), 36)) / (pow(( 1 + $credit_percent ), 36) - 1) ) );
     
-    $min_pay_credit = round( ($priceBYN * 0.6) * (($leasing_percent * pow((1 + $leasing_percent ), 60)) / (pow(( 1 + $credit_percent ), 60) - 1) ) );
+    $min_pay_leasing = round( ($priceBYN * 0.6) * (($leasing_percent * pow((1 + $leasing_percent ), 60)) / (pow(( 1 +$leasing_percent ), 60) - 1) ) );
 
 
 

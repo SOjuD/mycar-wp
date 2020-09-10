@@ -2,7 +2,7 @@ import '../styles/main.sass'
 import "bootstrap/scss/bootstrap-grid.scss";
 
 
-import $ from 'jquery';
+// import $ from 'jquery';
 
 
 // init components as materialize and different
@@ -28,6 +28,7 @@ import '../../components/catalog-pagination/catalog-pagination';
 import '../../components/change-form/change-form';
 import '../../components/our-center/our-center';
 import '../../components/our-blanck-reviews/our-blanck-reviews';
+import '../../components/kredit-calc/kredit-calc';
 
 
 

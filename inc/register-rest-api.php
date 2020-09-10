@@ -183,8 +183,25 @@ function mycar_rest_func( WP_REST_Request $request ){
 
 }
 
+function mycar_get_car ( WP_REST_Request $request ) {
+    $thumbnailUrl = get_the_post_thumbnail_url($request['id'], 'large');
+    $price = get_field('price', $request['id'] );
+    
+	if ( !$thumbnailUrl || !$price ) return new WP_Error( 'no_post', 'Записей не найдено', [ 'status' => 404 ] );
+    
+    $response = array(
+        'thumbnailUrl'  => $thumbnailUrl,
+        'price'         => $price
+    );
+	return $response;
+}
+
 add_action( 'rest_api_init', function(){
 
+	register_rest_route( 'mycar/v1', '/car-to-credit/(?P<id>\d+)', [
+		'methods'  => 'GET',
+        'callback' => 'mycar_get_car',
+	] );
 	register_rest_route( 'mycar/v1', '/posts/', [
 		'methods'  => 'GET',
         'callback' => 'mycar_rest_func',
@@ -197,9 +214,7 @@ add_action( 'rest_api_init', function(){
                 'type'    => 'integer', 
                 'default' => 32,
             ),
-            'model' => array(
-                'type'    => 'integer',
-            ),
+            'model',
             'year_from' => array(
                 'type'    => 'integer', 
             ),

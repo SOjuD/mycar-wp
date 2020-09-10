@@ -220,6 +220,43 @@ input::-webkit-inner-spin-button
     box-shadow: 0px 0px 9px rgba(211, 41, 41, 0.12) !important
 
 
+.terms
+    background: #F4F4F4
+    padding: 40px 10px 40px 40px
+    height: 100%
+    color: rgba($black, .65)
+    &-list
+        &-item
+            margin-bottom: 8px
+            &:last-child 
+                margin-bottom: 0
+            &:before
+                content: "" 
+                width: 14px
+                min-width: 14px
+                height: 14px
+                border-radius: 100%
+                background: #E4801C
+                display: inline-block
+                margin-right: 15px
+           
+    &-wrap
+        padding-bottom: 30px
+    &-title
+        color: $primary
+        margin-bottom: 21px
+    &-description
+        border-bottom: 1px solid $primary
+        margin-right: 60px
+        margin-bottom: 35px
+        min-height: 160px
+        span
+            margin-bottom: 14px
+            display: block
+    .mainButton_large
+        margin-top: 30px
+
+
 @media #{ $lg-and-down }
     .arrowBlock
         &-content
@@ -239,3 +276,5 @@ input::-webkit-inner-spin-button
         .t1 
             font-weight: 400
             margin-bottom: 20px
+    .terms
+        padding: 40px 20px 20px 20px

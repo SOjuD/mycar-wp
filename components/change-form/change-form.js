@@ -8,7 +8,7 @@ import { addModels, addCars, sendFeedback } from '../../assets/scripts/functions
     
     formCar.addEventListener('change', async (evt)=>{
         const elem = evt.target;
-
+        let mark;
         if(elem.name == 'mark') addModels(elem.value, formCar); 
         if(elem.name == 'model') addCars(elem.value, formCar); 
 
