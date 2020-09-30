@@ -13,13 +13,13 @@
             
                     
                             <ul class="komissiya-steps-list">
-                                    <li class="item">Полная мойка автомобиля</li>
-                                    <li class="item">Химчистка салона</li>
-                                    <li class="item">Очистка кузова от битума</li>
-                                    <li class="item">Мойка двигателя</li>
-                                    <li class="item">Уборка и пылесос салона</li>
-                                    <li class="item">Полировка кузова</li>
-                                    <li class="item">Отбеливание дисков</li>
+                                    <li class="item p1_semi">Полная мойка автомобиля</li>
+                                    <li class="item p1_semi">Химчистка салона</li>
+                                    <li class="item p1_semi">Очистка кузова от битума</li>
+                                    <li class="item p1_semi">Мойка двигателя</li>
+                                    <li class="item p1_semi">Уборка и пылесос салона</li>
+                                    <li class="item p1_semi">Полировка кузова</li>
+                                    <li class="item p1_semi">Отбеливание дисков</li>
                             </ul>
                             <p>при условии заключения договора на 45 дней (автомобиль должен быть на транзитных номерах)</p>
                             

@@ -99,10 +99,10 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <a href="<?php echo get_page_link( 35 ) ?>" class="service d-flex justify-content-end">
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                    <a href="<?php // echo get_page_link( 35 ) ?>" class="service d-flex justify-content-end">
                     <div class="service-img">
-                            <img src="<?php echo $theme_path ?>assets/img/services/7.jpg" alt="img" >
+                            <img src="<?php // echo $theme_path ?>assets/img/services/7.jpg" alt="img" >
                         </div>
                         <div class="service-content">
                             <div class="service-count h1">7</div>
@@ -110,11 +110,11 @@
                             <div class="service-description c1">Выполняем комплекс процедур <br>по уходу за автомобилем</div>
                             <div class="service-caption c1_semi d-flex align-items-center">
                                 Купить в лизинг
-                                <?php get_template_part( './icons/arrow' ) ?>
+                                <?php // get_template_part( './icons/arrow' ) ?>
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
         </div>
     </div>
 </section>

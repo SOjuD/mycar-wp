@@ -162,10 +162,15 @@ async function setCarToCredit (id, form) {
 }
 
 function calcMinCreditPay (percent, months, price, prePay = 0){
-    const startPrice = price - prePay;
+
+    const i = +percent;
+    const n = +months;
+    const startPrice = +price - +prePay;
 
     if(price == 0) return 0;
-    return Math.round((startPrice * 0.6) * ((percent * Math.pow((1 + percent), months)) / (Math.pow((1 + percent), months) - 1)));
+    let coef = (Math.pow((1 + i), n) * i) / (Math.pow((1 + i), n) - 1);
+
+    return Math.round( startPrice * coef );
 }
 
 async function sendFeedback (evt) {

@@ -8,6 +8,7 @@
     <?php get_template_part( './components/last-cars/last-cars' ) ?>
     <?php get_template_part( './components/services/services' ) ?>
     <?php get_template_part( './components/about-us/about-us' ) ?>
+    <?php get_template_part( './components/our-partners/our-partners' ) ?>
     <?php get_template_part( './components/our-instagram/our-instagram' ) ?>
 
 </main>

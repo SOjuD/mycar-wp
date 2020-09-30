@@ -8,25 +8,25 @@
                     <div class="col-12 col-md-4 col-lg-3">
                         <div class="p1_semi contacts-title">Телефоны</div>
                         <div class="c1 d-flex align-items-baseline">
-                            <a href="tel:<?php echo strPhone( $customizer_params['phone-a1'] ) ?>" class="phone c2_semi"><?php echo $customizer_params['phone-a1'] ?></a>
+                            <a href="tel:<?php echo strPhone( $customizer_params['phone-a1'] ) ?>" class="phone c1_semi"><?php echo $customizer_params['phone-a1'] ?></a> 
                             A1
                         </div>
                         <div class="c1 d-flex align-items-baseline">
-                            <a href="tel:<?php echo strPhone( $customizer_params['phone-mts'] ) ?>" class="phone c2_semi"><?php echo $customizer_params['phone-mts'] ?></a>
+                            <a href="tel:<?php echo strPhone( $customizer_params['phone-mts'] ) ?>" class="phone c1_semi"><?php echo $customizer_params['phone-mts'] ?></a> 
                             MTC
                         </div>
                         <div class="c1 d-flex align-items-baseline">
-                            <a href="tel:<?php echo strPhone( $customizer_params['phone-life'] ) ?>" class="phone c2_semi"><?php echo $customizer_params['phone-life'] ?></a>
+                            <a href="tel:<?php echo strPhone( $customizer_params['phone-life'] ) ?>" class="phone c1_semi"><?php echo $customizer_params['phone-life'] ?></a> 
                             Life
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-3 time">
                         <div class="p1_semi contacts-title">Время работы</div>
                         <div class="c1">
                             <?php echo $customizer_params['time'] ?>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-3 adress">
                         <div class="p1_semi contacts-title">Адрес</div>
                         <div class="c1">
                             <?php echo $customizer_params['adress'] ?>
@@ -42,7 +42,7 @@
                             <?php echo $customizer_params['jur-adress'] ?>
                         </div>
                     </div>
-                    <div class="col-12 dev-by d-flex justify-content-start justify-content-md-end">
+                    <div class="col-12 dev-by d-flex justify-content-center">
                         <div class="c1">Сайт разработан 
                             <a class="c1" href="http://mediarama.by/">mediarama.by</a>
                         </div>

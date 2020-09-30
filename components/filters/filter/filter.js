@@ -1,4 +1,4 @@
-import { objFromSearch, searchFromObj, addModels, changeCatalog } from '../../../assets/scripts/functions';
+import { searchFromObj, addModels, changeCatalog } from '../../../assets/scripts/functions';
 import { changeCatalogView } from '../../catalog-sort/catalog-sort';
 import M from "materialize-css";
 

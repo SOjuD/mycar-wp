@@ -1,15 +1,26 @@
 .toFilter
-    select
+    .select
         margin-right: 16px 
         flex: 1 0 120px
         max-width: 160px
         height: 50px
-        border: 1px solid #EBEBEB
         margin-bottom: 0
         padding: 0 10px
         display: block
         &:nth-child(2), &:nth-child(3)
-            flex: 1 0 160px
+            flex: 1 0 140px
+        &:nth-child(2), &:nth-child(3), &:nth-child(5),
+            &:before 
+                position: absolute
+                content: ''
+                height: 40px
+                width: 2px
+                background: $gray_light
+                right: 0
+                top: 50%
+                transform: translateY(-50%)
+                opacity: .6
+
     .mainButton 
         width: auto
         max-width: 100%
@@ -19,13 +30,16 @@
 
 @media #{ $lg-and-down }
     .toFilter
-        select
+        .select
             margin-bottom: 16px
             margin-right: 0
             flex: 1 0 160px
+            &:nth-child(2), &:nth-child(3), &:nth-child(5),
+                &:before 
+                    display: none
         .mainButton 
             margin-bottom: 16px
 @media #{ $sm-and-down }
     .toFilter
-        select
+        .select
             max-width: 48%

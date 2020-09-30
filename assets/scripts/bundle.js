@@ -27,6 +27,7 @@ import '../../components/catalog-list/catalog-list';
 import '../../components/catalog-pagination/catalog-pagination';
 import '../../components/change-form/change-form';
 import '../../components/our-center/our-center';
+import '../../components/our-partners/our-partners';
 import '../../components/our-blanck-reviews/our-blanck-reviews';
 import '../../components/kredit-calc/kredit-calc';
 

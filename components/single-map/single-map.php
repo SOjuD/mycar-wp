@@ -6,6 +6,8 @@
             Место осмотра автомобиля
             <div class="p1_semi"><?php echo $customizer_params['adress'] ?></div>
         </div>
-        <?php echo $customizer_params['map'] ?>
+        <div class="single-map-wrap">
+            <?php echo $customizer_params['map'] ?>
+        </div>
     </div>
 </section>
