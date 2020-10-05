@@ -12,6 +12,7 @@
     <form class="container" id="kreditForm" data-percent="<?php echo $credit_percent ?>" data-rate="<?php echo $rate ?>">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 kreditCalc-col">
+            <div class="select">
                 <select name="mark">
                     <option selected disabled value="">Марка автомобиля</option>
                     <?php
@@ -20,12 +21,17 @@
                     }
                     ?>
                 </select>
+            </div>
+            <div class="select">
                 <select name="model">
                     <option selected disabled value="">Модель автомобиля</option>
                 </select>
+            </div>
+            <div class="select">
                 <select name="car">
                     <option selected disabled value="">Автомобиль</option>
                 </select>
+            </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 kreditCalc-col">
                 <div class="t2">

@@ -8,7 +8,7 @@
         <div class="col-12 col-sm-4 col-md-4 col-lg-4 ">
             <div class="buyBack d-flex align-items-center">
                 <div class="buyBack-image pr-3">
-                <img src="<?php echo $theme_path."assets/img/svg/buyBack/1.svg" ?>" alt="">
+                <img src="<?php echo $theme_path."assets/img/svg/buyBack/1.svg" ?>" alt="img">
                 </div>
                 <div class="buyBack-text p1">
                 Технический паспорт<br> автомобиля 
@@ -19,7 +19,7 @@
         <div class="col-12 col-sm-4 col-md-4 col-lg-4 ">
             <div class="buyBack d-flex align-items-center">
                 <div class="buyBack-image pr-3">
-                <img src="<?php echo $theme_path."assets/img/svg/buyBack/2.svg" ?>" alt="">
+                <img src="<?php echo $theme_path."assets/img/svg/buyBack/2.svg" ?>" alt="img">
                 </div>
                 <div class="buyBack-text p1">
                 Паспорт 
@@ -29,7 +29,7 @@
         <div class="col-12 col-sm-4 col-md-4 col-lg-4 ">
             <div class="buyBack d-flex align-items-center">
                 <div class="buyBack-image pr-3">
-                <img src="<?php echo $theme_path."assets/img/svg/buyBack/3.svg" ?>" alt="">
+                <img src="<?php echo $theme_path."assets/img/svg/buyBack/3.svg" ?>" alt="img">
                 </div>
                 <div class="buyBack-text p1">
                 Доверенность<br>

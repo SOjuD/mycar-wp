@@ -11,20 +11,26 @@
         <form class="row justify-content-center" id="leasingCars">
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="changeForm-subtitle p1_semi">Вариант обмена</div>
-                <select name="mark">
-                    <option selected disabled value="">Марка автомобиля</option>
-                    <?php
-                    if ($categories) {
-                        foreach ($categories as $cat) echo "<option value='$cat->cat_ID'>$cat->name</option>";
-                    }
-                    ?>
-                </select>
-                <select name="model">
-                    <option selected disabled value="">Модель автомобиля</option>
-                </select>
-                <select name="car">
-                    <option selected disabled value="">Автомобиль</option>
-                </select>
+                <div class="select">
+                    <select name="mark">
+                        <option selected disabled value="">Марка автомобиля</option>
+                        <?php
+                        if ($categories) {
+                            foreach ($categories as $cat) echo "<option value='$cat->cat_ID'>$cat->name</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="select">
+                    <select name="model">
+                        <option selected disabled value="">Модель автомобиля</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <select name="car">
+                        <option selected disabled value="">Автомобиль</option>
+                    </select>
+                </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="changeForm-subtitle p1_semi">Ваш атомобиль</div>

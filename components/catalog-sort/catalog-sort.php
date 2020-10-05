@@ -1,13 +1,15 @@
 <div class="col-12 col-md-6">
-    <div class="sort c1_semi">
+    <div class="sort c1_semi d-flex align-items-center">
         Сортировать:
-        <select name="sort">
-            <option value="" selected>По умолчанию</option>
-            <option value="price_down">По цене ↓</option>
-            <option value="price_up">По цене ↑</option>
-            <option value="year_down">По году ↓</option>
-            <option value="year_up">По году ↑</option>
-        </select>
+        <div class="select">
+            <select name="sort">
+                <option value="" selected>По умолчанию</option>
+                <option value="price_down">По цене ↓</option>
+                <option value="price_up">По цене ↑</option>
+                <option value="year_down">По году ↓</option>
+                <option value="year_up">По году ↑</option>
+            </select>
+        </div>
     </div>
 </div>
 <div class="col-12 col-md-6 d-none d-md-flex c1_semi justify-content-end selectView">

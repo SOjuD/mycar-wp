@@ -216,13 +216,15 @@ input::-webkit-inner-spin-button
         background: rgba($white, .7) url(../img/loading.svg) no-repeat center
 
 .pageBanner
-    background: url(../img/banner.jpg) no-repeat center
+    min-height: 690px
+    background: url(../img/banner.jpg) no-repeat bottom 
     background-size: cover
     padding: 120px 0
     color: $white
     .h1 
         color: $secondary
         margin-bottom: 20px
+        font-weight: 600
     .t1 
         margin-bottom: 14px
     .mainButton 
@@ -233,6 +235,12 @@ input::-webkit-inner-spin-button
 
 .arrowBlock
     margin-bottom: 50px
+    height: 100%
+    min-height: 190px
+    position: relative
+    &-content
+        position: relative
+        z-index: 2
     &-num
         font-size: 69px
         font-weight: 700
@@ -240,8 +248,11 @@ input::-webkit-inner-spin-button
         margin-bottom: 6px
         margin-right: 20px
     &-text
-        max-width: 140px
-
+        max-width: 240px
+    &-img
+        position: absolute
+        top: 0
+        right: 0
 .error 
     border: 1px solid #F54545 !important
     box-shadow: 0px 0px 9px rgba(211, 41, 41, 0.12) !important
@@ -286,22 +297,45 @@ input::-webkit-inner-spin-button
 
 @media #{ $lg-and-down }
     .arrowBlock
+        min-height: 0
         &-content
             width: 100%
+        &-num
+            min-width: 50px
+            text-align: center
+        &-list 
+            width: 100%
+            margin-top: -30px
 
 
 @media #{ $sm-and-down }
+    .h1
+        font-size: 40px
+        line-height: 48px
+        margin-bottom: 40px
+    .h2 
+        font-size: 24px
+        line-height: 32px
+        font-weight: 600
+        font-family: $title-font
+
+    .t1
+        font-size: 20px
+        line-height: 28px
+        font-weight: 700
+        font-family: $title-font
+
+    .t2
+        font-size: 18px
+        line-height: 26px
+        font-weight: 700
+        font-family: $title-font
+
+
     .swiper-button-next, .swiper-button-prev
         display: none
     .pageBanner
+        min-height: calc(100vh - 60px)
         padding: 60px 0
-    .pageBanner 
-        .h1
-            font-size: 48px
-            line-height: 56px
-            margin-bottom: 40px
-        .t1 
-            font-weight: 400
-            margin-bottom: 20px
     .terms
         padding: 40px 20px 20px 20px

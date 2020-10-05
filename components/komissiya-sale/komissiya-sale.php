@@ -2,7 +2,7 @@
 
 <section class="simpleStep komissiyaSale">
     <div class="container">
-        <div class="secTitle">Специальное предложение</div>
+        <div class="secTitle">Рекомендуем перед продажей</div>
 
         <div class="row">
 

@@ -50,6 +50,7 @@
                 </div>
             </div>
         </footer>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     </body>
     <?php 
         get_template_part('./components/navigation/contacts/contacts');

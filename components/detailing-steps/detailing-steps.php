@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/1.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/1.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/2.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/2.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>
@@ -48,11 +48,11 @@
                             <li class="arrowBlock-list-item c1">Защитное покрытие кузова</li>
                             <li class="arrowBlock-list-item c1">Защитная обработка интерьера</li>
                             <li class="arrowBlock-list-item c1">Защитная обработка дисков</li>
-                            <li class="arrowBlock-list-item c1">Покрытие Антидождь для стёкол</li>
+                            <li class="arrowBlock-list-item c1">Покрытие Антидождь <br>для стёкол</li>
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/3.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/3.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/4.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/4.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/5.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/5.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/6.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/6.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/7.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/7.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/8.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/8.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@
                         </ul>
                     </div>
                     <div class="arrowBlock-img d-none d-lg-block">
-                        <img src="<?php echo $theme_path."assets/img/detailing/9.jpg" ?>" alt="">
+                        <img src="<?php echo $theme_path."assets/img/detailing/9.jpg" ?>" alt="img">
                     </div>
                 </div>
             </div>

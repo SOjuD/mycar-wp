@@ -11,13 +11,16 @@ const linksSlider = new Swiper('.swiper-links', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 6,
+            slidesPerView: 2,
         },
-        768: {
+        568: {
             slidesPerView: 3,
         },
-        992: {
+        768: {
             slidesPerView: 4,
+        },
+        992: {
+            slidesPerView: 5,
         },
         1200: {
             slidesPerView: 6,
